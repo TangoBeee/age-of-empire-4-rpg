@@ -59,6 +59,20 @@ public class Main {
                 play.intro();
                 System.out.println("\n\u001B[35mWanna play again?\n");
             }
+
+            else if(num == 2) {
+
+            }
+
+            else if(num == 3) {
+                Help help = new Help();
+                help.help();
+                clearScreen();
+            }
+
+            else if(num == 4) {
+
+            }
 //          <------- Working Here ------->
             else {
                 System.out.println("\u001B[31mWrong input! Try Again.\n");
