@@ -71,7 +71,7 @@ public class Main {
             }
 
             else if(num == 4) {
-
+                new Settings();
             }
 //          <------- Working Here ------->
             else {
