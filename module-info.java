@@ -1,2 +1,2 @@
-module age-of-empire-4 {
+module aoe4 {
 }
