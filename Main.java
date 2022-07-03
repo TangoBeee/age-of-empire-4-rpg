@@ -1,8 +1,10 @@
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.IOException;
 import java.util.Scanner;
-import java.lang.Thread;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, UnsupportedAudioFileException, LineUnavailableException, IOException {
             clearScreen();
             System.out.print("\u001B[33m");
             System.out.print("""
@@ -37,13 +39,14 @@ public class Main {
                     /_/    \\_\\_____|______|       \\____/|_|         |______|_|  |_|_|   |_____|_|  \\_\\______|    |_| \s
                                                                                                                      \s
                                                                                                                      \s""");
-            while (true) {
-                System.out.print("\u001B[0m");
+        Settings settings = new Settings();
+        while (true) {
+            System.out.print("\u001B[0m");
             System.out.println("""
                     1. Play Single-Player
                     2. Multiplayer
                     3. Help
-                    4. Settings ("Coming Soon...")
+                    4. Settings
                     5. Quit (Just Quit the game)\n""");
             System.out.print("Input :- ");
             int num = input.nextInt();
@@ -61,7 +64,7 @@ public class Main {
             }
 
             else if(num == 2) {
-
+                System.out.print("Coming Soon....");
             }
 
             else if(num == 3) {
@@ -71,7 +74,7 @@ public class Main {
             }
 
             else if(num == 4) {
-                new Settings();
+                settings.userInput();
             }
 //          <------- Working Here ------->
             else {
